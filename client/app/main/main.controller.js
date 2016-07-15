@@ -4,9 +4,12 @@
 
   class MainController {
 
-    constructor($http) {
+    constructor($http, Auth) {
       this.$http = $http;
+      this.isLoggedIn = Auth.isLoggedIn;
+      this.isAdmin = Auth.isAdmin;
       this.awesomeThings = [];
+
     }
 
     $onInit() {
@@ -33,6 +36,7 @@
   angular.module('aApp')
     .component('main', {
       templateUrl: 'app/main/main.html',
-      controller: MainController
+      controller: MainController,
+      controllerAs: 'mainCtrl'
     });
 })();

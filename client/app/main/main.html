@@ -1,11 +1,10 @@
-<header class="hero-unit" id="banner">
+<!-- <header class="hero-unit" id="banner">
   <div class="container">
     <h1>'Allo, 'Allo!</h1>
     <p class="lead">Kick-start your next web app with Angular Fullstack</p>
     <img src="assets/images/yeoman.png" alt="I'm Yeoman">
   </div>
 </header>
-
 <div class="container">
   <div class="row">
     <div class="col-lg-12">
@@ -13,6 +12,74 @@
       <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="thing in $ctrl.awesomeThings">
         <li><a href="#" uib-tooltip="{{thing.info}}">{{thing.name}}</a></li>
       </ul>
+    </div>
+  </div>
+</div>
+-->
+<div class="userMain" ng-hide="mainCtrl.isLoggedIn()">
+  <div class="landing-bg row" style="margin-bottom:0 !important;">
+    <div class="col m6 l6 s12 home-option">
+      <h1 class="heading-text">Home</h1>
+      <a ng-hide="mainCtrl.isLoggedIn()" ng-click="modalLogin()" modal id="download-button" class="btn-large waves-effect waves-light tx-green lighten-1">Pesan Tukang</a>
+      <a ng-show="mainCtrl.isLoggedIn()" ui-sref="" class="btn-large waves-effect waves-light tx-green lighten-1">Pesan Tukang</a>
+    </div>
+    <div class="col m6 l6 s12 office-option">
+      <h1 class="heading-text">Office</h1>
+      <a ng-hide="mainCtrl.isLoggedIn()" ng-click="modalLogin()" modal id="download-button" class="btn-large waves-effect waves-light tx-green lighten-1">Pesan Tukang</a>
+      <a ng-show="mainCtrl.isLoggedIn()" ui-sref="" class="btn-large waves-effect waves-light tx-green lighten-1">Pesan Tukang</a>
+    </div>
+  </div>
+
+<div class="white">
+  <div class="container">
+    <div class="section">
+      <!--   Icon Section   -->
+      <div class="row">
+        <h3 class="tx-green-text center">Cara Kerja</h3>
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center tx-green-text"><i class="material-icons">touch_app</i></h2>
+            <h5 class="tx-green-text center">Pilih Category</h5>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center tx-green-text"><i class="material-icons">monetization_on</i></h2>
+            <h5 class="tx-green-text center">Masukan Budget</h5>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center tx-green-text"><i class="material-icons">content_paste</i></h2>
+            <h5 class="tx-green-text center">Minta Proposal</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section">
+      <div class="container">
+        <div class="row center">
+          <h3 class="col s12 light">Daftar Sebagai Vendor</h3>
+          <a href="#/register.vendor" id="download-button" class="btn-large waves-effect waves-light tx-green lighten-1">Register as Vendor</a>
+        </div>
+      </div>
+    </div>
+    <div parallax><img src="assets/images/constructor.jpg"></div>
+  </div>
+  <div class="tx-green">
+    <div class="container">
+      <div class="section">
+        <div class="row">
+          <div class="col s12 center about">
+            <h3 class="white-text header-about">Tentang Tukang Xpress</h3>
+            <p class="center light white-text">"Tukang Xpress adalah sebuah startup yang bergerak di dalam bidang Home Service Provider. Dalam waktu dekat Apps kami akan membantu anda untuk mencari Penyedia Jasa Layanan Service untuk Rumah anda dengan mudah."</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

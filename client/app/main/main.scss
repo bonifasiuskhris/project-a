@@ -25,3 +25,74 @@
 .navbar-text {
   margin-left: 15px;
 }
+
+/*gema*/
+
+.home-option {
+/*display: inline-block;*/
+/*width: 50%;*/
+height: 600px;
+background: url('../../assets/images/BGhome.jpg');
+background-size: cover;
+cursor: pointer;
+cursor: hand;
+display: block;
+opacity: 0.4;
+}
+
+.home-option:hover {
+  height: 600px;
+  margin: 0;
+  padding: 0;
+  opacity: 1;
+  -webkit-transition: opacity .25s ease;
+}
+
+@media only screen and (max-width : 600px) {
+  .home-option{
+    opacity: 1;
+    height: 300px;
+  }
+}
+
+@media only screen and (max-width : 992px) {
+  .home-option {
+    opacity: 1;
+  }
+}
+
+.office-option {
+/*display: inline-block;*/
+/*width: 50%;*/
+height: 600px;
+background: url('../../assets/images/BGoffice.jpg');
+background-size: cover;
+cursor: pointer;
+cursor: hand;
+margin: 0;
+padding: 0;
+display: block;
+opacity: 0.4;
+}
+
+.office-option:hover {
+  height: 600px;
+  margin: 0;
+  padding: 0;
+  opacity: 1;
+  -webkit-transition: opacity .25s ease;
+}
+
+@media only screen and (max-width : 600px) {
+  .office-option{
+    opacity: 1;
+    height: 300px;
+  }
+}
+
+@media only screen and (max-width : 992px) {
+  .office-option {
+    opacity: 1;
+  }
+}
+
