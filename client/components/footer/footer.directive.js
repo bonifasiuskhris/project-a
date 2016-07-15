@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('aApp')
-  .directive('footer', function() {
+  .directive('foooter', function() {
     return {
       templateUrl: 'components/footer/footer.html',
       restrict: 'E',

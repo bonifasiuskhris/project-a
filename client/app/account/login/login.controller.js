@@ -27,6 +27,7 @@ class LoginController {
         });
     }
   }
+
 }
 
 angular.module('aApp')

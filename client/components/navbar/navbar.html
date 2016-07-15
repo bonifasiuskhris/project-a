@@ -1,4 +1,4 @@
-<div class="navbar navbar-default navbar-static-top" ng-controller="NavbarController">
+<!-- <div class="navbar navbar-default navbar-static-top" ng-controller="NavbarController">
   <div class="container">
     <div class="navbar-header">
       <button class="navbar-toggle" type="button" ng-click="nav.isCollapsed = !nav.isCollapsed">
@@ -26,4 +26,50 @@
       </ul>
     </div>
   </div>
+</div>
+ -->
+
+
+  <div class="navbar-fixed">
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="/" class="brand-logo">
+        <img class="logo-image navbar-brand" src="../assets/images/tx-logo.png">
+      </a>
+     
+      <ul class="right hide-on-med-and-down">
+        <li>
+          <a ng-hide="nav.isLoggedIn()" class="waves-effect waves-green" ng-href="register.vendor">Register Vendor</a>
+        </li>
+        <li>
+          <a ng-hide="nav.isLoggedIn()" class="waves-effect waves-green" ng-href="register">Register Pengunjung</a>
+          <a ng-show="nav.isLoggedIn()" ui-sref="user/main-auth">Main</a>
+        </li>
+        <li>
+          <a ng-hide="nav.isLoggedIn()" class="waves-effect waves-green" ng-click='modalLogin()' modal>Login</a>
+          <a ng-show="nav.isLoggedIn()" ui-sref="user/account">Account</a>
+        </li>
+        <li>
+          <a ng-show="nav.isLoggedIn()" ui-sref="logout" >Logout</a>
+        </li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav dark">
+        <li>
+          <a ng-hide="nav.isLoggedIn()" ui-sref="register.vendor">Daftar Vendor</a>
+        </li>
+         <li>
+          <a ng-hide="nav.isLoggedIn()" ui-sref="register">Daftar Pengunjung</a>
+        </li>
+        <li>
+          <a ng-hide="nav.isLoggedIn()" ng-click="modalLogin()">Login</a>
+          <a ng-show="nav.isLoggedIn()" ui-sref="account">Account</a>
+        </li>
+        <li>
+          <a ng-show="nav.isLoggedIn()" ui-sref="logout" >Logout</a>
+        </li>
+      </ul>
+      <a href="#" class="button-collapse" data-activates="nav-mobile" data-sidenav="left" data-closeonclick="false"><i class="material-icons white-text">menu</i></a>
+    </div>
+  </nav>
 </div>
