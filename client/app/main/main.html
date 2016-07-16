@@ -23,17 +23,17 @@
       $('.parallax').parallax();
   }); // end of document ready
 }); // end of jQuery name space
-//   </script>
+  </script>
   <div class="landing-bg row" style="margin-bottom:0 !important;">
     <div class="col m6 l6 s12 home-option">
       <h1 class="heading-text">Home</h1>
-      <a ng-hide="mainCtrl.isLoggedIn()" ng-click="modalLogin()" modal id="download-button" class="btn-large waves-effect waves-light tx-green lighten-1">Pesan Tukang</a>
-      <a ng-show="mainCtrl.isLoggedIn()" ui-sref="/" class="btn-large waves-effect waves-light tx-green lighten-1">Pesan Tukang</a>
+      <a ui-sref="login" modal id="download-button" class="btn-large waves-effect waves-light tx-green lighten-1">Pesan Tukang</a>
+      <!-- <a ng-show="mainCtrl.isLoggedIn()" ui-sref="/" class="btn-large waves-effect waves-light tx-green lighten-1">Pesan Tukang</a> -->
     </div>
     <div class="col m6 l6 s12 office-option">
       <h1 class="heading-text">Office</h1>
-      <a ng-hide="mainCtrl.isLoggedIn()" ng-click="modalLogin()" modal id="download-button" class="btn-large waves-effect waves-light tx-green lighten-1">Pesan Tukang</a>
-      <a ng-show="mainCtrl.isLoggedIn()" ui-sref="/" class="btn-large waves-effect waves-light tx-green lighten-1">Pesan Tukang</a>
+      <a ui-sref="login" modal id="download-button" class="btn-large waves-effect waves-light tx-green lighten-1">Pesan Tukang</a>
+      <!-- <a ng-show="mainCtrl.isLoggedIn()" ui-sref="/" class="btn-large waves-effect waves-light tx-green lighten-1">Pesan Tukang</a> -->
     </div>
   </div>
 

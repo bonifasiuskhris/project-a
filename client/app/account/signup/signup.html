@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
   <div class="row">
     <div class="col-sm-12">
       <h1>Sign up</h1>
@@ -84,3 +84,54 @@
   </div>
   <hr>
 </div>
+ -->
+
+
+<div class="tx-green head-page">
+    <div class="container">
+      <div class="row center">
+      <h2 class="header col s12 light">Registrasi Pengguna</h2>
+      </div>
+    </div>
+  </div>
+
+ <div class="container">
+   <div class="container section">
+  <h3 class="center">Isi form berikut</h3>
+   <div class="row">
+      <form class="form" name="form" ng-click="vm.register(form)" class="col s12">
+        <div class="row">
+          <div class="input-field col s6">
+            <input ng-model="vm.user.firstName" type="text" class="validate">
+            <label for="first_name">Nama Depan</label>
+          </div>
+          <div class="input-field col s6">
+            <input ng-model="vm.user.lastName" type="text" class="validate">
+            <label for="last_name">Nama Belakang</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input ng-model="vm.user.email" id="email" type="email" class="validate">
+            <label for="email">Email</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <input ng-model="vm.user.password" id="password" type="password" class="validate">
+            <label for="password">Password</label>
+          </div>
+          <div class="input-field col s6">
+            <input ng-model="vm.userconfirmPassword" id="retype_password" type="password" class="validate" match="vm.user.password">
+            <label for="retype_password">Retype Password</label>
+          </div>
+        </div>
+        <p ng-show="err" class="bg-danger">{{err}}</p>
+        <button type="submit" class="waves-effect waves-light tx-green btn btn-large"> Register </button> or
+        <oauth-buttons classes="btn blue btn-large"></oauth-buttons>
+      </form>
+   </div>
+  </div>
+    
+ </div>
+        

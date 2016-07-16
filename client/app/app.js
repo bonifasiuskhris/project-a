@@ -10,7 +10,8 @@ angular.module('aApp', [
     'ngSanitize',
     'ui.router',
     'validation.match',
-    'ui.materialize'
+    'ui.materialize',
+    // 'angularSpinner'
 ])
 .config(function($urlRouterProvider, $locationProvider) {
   $urlRouterProvider.otherwise('/');
