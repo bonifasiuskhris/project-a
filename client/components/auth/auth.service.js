@@ -172,6 +172,17 @@
         return Auth.hasRole.apply(Auth, [].concat.apply(['admin'], arguments));
       },
 
+       /**
+       * Check if a user is a Vendor
+       *   (synchronous|asynchronous)
+       *
+       * @param  {Function|*} callback - optional, function(is)
+       * @return {Bool|Promise}
+       */
+       isVendor() {
+         return Auth.hasRole.apply(Auth, [].concat.apply(['vendor'], arguments));
+       },
+
       /**
        * Get auth token
        *

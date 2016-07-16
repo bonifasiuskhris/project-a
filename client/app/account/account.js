@@ -24,6 +24,12 @@ angular.module('aApp')
         controller: 'SignupController',
         controllerAs: 'vm'
       })
+      .state('signupVendor', {
+        url: '/signupVendor',
+        templateUrl: 'app/account/signupVendor/signupVendor.html',
+        controller: 'SignupVendorController',
+        controllerAs: 'vm'
+      })
       .state('settings', {
         url: '/settings',
         templateUrl: 'app/account/settings/settings.html',

@@ -1,0 +1,36 @@
+<!-- Modal Structure -->
+    <div id="modalLogin" class="modal">
+        <div class="modal-content">
+         <div class="row">
+              <h4 class="center">Login</h4>
+              <form class="col s12" role="form">
+                <div class="row">
+                  <div class="input-field col s12 m8 l6 offset-m2 offset-l3">
+                    <i class="material-icons prefix">account_circle</i>
+                      <input ng-model="loginEmail" required name="email" id="icon_prefix" type="text" class="validate">
+                      <label for="icon_prefix">Email</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12 m8 l6 offset-m2 offset-l3">
+                    <i class="material-icons prefix">lock</i>
+                      <input ng-model="loginPass" required name="pass" id="icon_lock" type="password" class="validate">
+                      <label for="icon_lock">Password</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col s12 m8 l6 offset-m2 offset-l3">
+                    <p>Belum memiliki account? <a href="/register">daftar sekarang</a></p>
+                  </div>
+                </div>
+               <div class="row">
+                  <div class="col s6 offset-s5">
+                  <p ng-show="err" class="bg-danger">{{err}}</p>
+                    <a ng-click="passwordLogin(loginEmail, loginPass)" class="modal-action modal-close waves-effect waves-light tx-green btn-large">Login</a>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+    </div>
+    <!-- End Modal -->

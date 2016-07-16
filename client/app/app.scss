@@ -19,9 +19,10 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 /* inject:scss */
 @import 'admin/admin';
 @import 'main/main';
-@import '../components/navbar/navbar';
+@import 'vendor/vendor';
 @import '../components/footer/footer';
 @import '../components/modal/modal';
+@import '../components/navbar/navbar';
 @import '../components/oauth-buttons/oauth-buttons';
 /* endinject */
 
@@ -109,75 +110,6 @@ footer.page-footer {
    background-color: #000;
    opacity: 1 !important;
 }
-
-
-// .home-option {
-// /*display: inline-block;*/
-// /*width: 50%;*/
-// height: 600px;
-// background: url('../img/BGhome.jpg');
-// background-size: cover;
-// cursor: pointer;
-// cursor: hand;
-// display: block;
-// opacity: 0.4;
-// }
-
-// .home-option:hover {
-//   height: 600px;
-//   margin: 0;
-//   padding: 0;
-//   opacity: 1;
-//   -webkit-transition: opacity .25s ease;
-// }
-
-// @media only screen and (max-width : 600px) {
-//   .home-option{
-//     opacity: 1;
-//     height: 300px;
-//   }
-// }
-
-// @media only screen and (max-width : 992px) {
-//   .home-option {
-//     opacity: 1;
-//   }
-// }
-
-// .office-option {
-// /*display: inline-block;*/
-// /*width: 50%;*/
-// height: 600px;
-// background: url('../img/BGoffice.jpg');
-// background-size: cover;
-// cursor: pointer;
-// cursor: hand;
-// margin: 0;
-// padding: 0;
-// display: block;
-// opacity: 0.4;
-// }
-
-// .office-option:hover {
-//   height: 600px;
-//   margin: 0;
-//   padding: 0;
-//   opacity: 1;
-//   -webkit-transition: opacity .25s ease;
-// }
-
-// @media only screen and (max-width : 600px) {
-//   .office-option{
-//     opacity: 1;
-//     height: 300px;
-//   }
-// }
-
-// @media only screen and (max-width : 992px) {
-//   .office-option {
-//     opacity: 1;
-//   }
-// }
 
 .logo-image {
    height: 40px;
