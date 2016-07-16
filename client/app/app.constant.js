@@ -1,11 +1,13 @@
 (function(angular, undefined) {
   angular.module("aApp.constants", [])
-
+s
 .constant("appConfig", {
 	"userRoles": [
 		"guest",
-		"user",
-		"admin"
+		// "user",
+		"customer",
+		"admin",
+		"vendor"
 	]
 })
 

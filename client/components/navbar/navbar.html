@@ -42,11 +42,11 @@
           <a ng-hide="nav.isLoggedIn()" class="waves-effect waves-green" ng-href="register.vendor">Register Vendor</a>
         </li> -->
         <li>
-          <a ng-hide="nav.isLoggedIn()" class="waves-effect waves-green" ng-href="register">Register User</a>
-          <a ng-show="nav.isLoggedIn()" ui-sref="user/main-auth">Main</a>
+          <a ng-hide="nav.isLoggedIn()" class="waves-effect waves-green" ui-sref="signup" >Register User</a>
+          <a ng-show="nav.isLoggedIn()" ui-sref="main">Main</a>
         </li>
         <li>
-          <a ng-hide="nav.isLoggedIn()" class="waves-effect waves-green" ng-click='modalLogin()' modal>Login</a>
+          <a ng-hide="nav.isLoggedIn()" class="waves-effect waves-green" ui-sref="login" modal>Login</a>
           <a ng-show="nav.isLoggedIn()" ui-sref="user/account">Account</a>
         </li>
         <li>
@@ -56,20 +56,20 @@
 
       <ul id="nav-mobile" class="side-nav dark">
         <li>
-          <a ng-hide="nav.isLoggedIn()" ui-sref="register.vendor">Daftar Vendor</a>
+          <a ng-hide="nav.isLoggedIn()" ui-sref="signupVendor">Daftar Vendor</a>
         </li>
          <li>
-          <a ng-hide="nav.isLoggedIn()" ui-sref="register">Daftar Pengunjung</a>
+          <a ng-hide="nav.isLoggedIn()" ui-sref="signup">Daftar Pengunjung</a>
         </li>
         <li>
-          <a ng-hide="nav.isLoggedIn()" ng-click="modalLogin()">Login</a>
+          <a ng-hide="nav.isLoggedIn()" ui-sref="login">Login</a>
           <a ng-show="nav.isLoggedIn()" ui-sref="account">Account</a>
         </li>
         <li>
           <a ng-show="nav.isLoggedIn()" ui-sref="logout" >Logout</a>
         </li>
       </ul>
-      <a href="#" class="button-collapse" data-activates="nav-mobile" data-sidenav="left" data-closeonclick="false"><i class="material-icons white-text">menu</i></a>
+      <a href="#" class="button-collapse" data-activates="nav-mobile" data-sidenav="left" data-closeonclick="false"><i class="material-icons tx-green-text">menu</i></a>
     </div>
   </nav>
 </div>

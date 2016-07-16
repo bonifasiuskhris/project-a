@@ -9,14 +9,23 @@
       this.isLoggedIn = Auth.isLoggedIn;
       this.isAdmin = Auth.isAdmin;
       this.awesomeThings = [];
-
+      this.getCurrentUser = Auth.getCurrentUser;
     }
 
     $onInit() {
+      if(this.isLoggedIn) {
       this.$http.get('/api/things')
         .then(response => {
           this.awesomeThings = response.data;
         });
+        console.log('this is Customer');
+      }
+      else if(this.isAdmin) {
+        console.log('this is Admin');
+      }
+      else {
+        console.log('this is Vendor');
+      }
     }
 
     addThing() {
