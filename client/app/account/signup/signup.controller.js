@@ -15,18 +15,18 @@ class SignupController {
 
     if (form.$valid) {
       this.Auth.createUser({
-          name: this.user.name,
-          email: this.user.email,
-          password: this.user.password
+          // name: this.user.name,
+          // email: this.user.email,
+          // password: this.user.password
 
           // prototype
 
-          // firstName: this.user.firstName,
-          // lastName: this.user.lastName,
-          // address: this.user.address,
+          firstName: this.user.firstName,
+          lastName: this.user.lastName,
+          address: this.user.address,
           // postal: this.user.postal,
-          // phone: this.user.phone,
-          // role: 'customer'
+          phone: this.user.phone,
+          password: this.user.password
         })
         .then(() => {
           // Account created, redirect to home

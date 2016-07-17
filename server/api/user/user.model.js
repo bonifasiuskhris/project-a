@@ -5,10 +5,15 @@ import mongoose from 'mongoose';
 mongoose.Promise = require('bluebird');
 import {Schema} from 'mongoose';
 
-const authTypes = ['github', 'twitter', 'facebook', 'google'];
+const authTypes = ['twitter', 'facebook', 'google'];
 
 var UserSchema = new Schema({
-  name: String,
+  // bikinan saya sendiri sampai phone sisanya original.
+  firstName: String,
+  lastName: String,
+  address: String,
+  phone: Number,
+  // name: String,
   email: {
     type: String,
     lowercase: true,
@@ -36,8 +41,7 @@ var UserSchema = new Schema({
   },
   provider: String,
   salt: String,
-  facebook: {},
-  github: {}
+  facebook: {}
 });
 
 /**

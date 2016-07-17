@@ -102,12 +102,34 @@
       <form class="form" name="form" ng-click="vm.register(form)" class="col s12">
         <div class="row">
           <div class="input-field col s6">
-            <input ng-model="vm.user.firstName" type="text" class="validate">
-            <label for="first_name">Nama Depan</label>
+            <input ng-model="vm.user.firstName" type="text" class="validate" required>
+            <label for="firstName">Nama Depan</label>
+            <p class="help-block" ng-show="form.firstName.$error.required && vm.submitted">
+            A name is required
+          </p>
           </div>
+
           <div class="input-field col s6">
-            <input ng-model="vm.user.lastName" type="text" class="validate">
-            <label for="last_name">Nama Belakang</label>
+            <input ng-model="vm.user.lastName" type="text" class="validate" required>
+            <label for="lastName">Nama Belakang</label>
+            <p class="help-block" ng-show="form.lastName.$error.required && vm.submitted">
+            A name is required
+          </p>
+          </div>
+
+          
+        </div>
+         <div class="row">
+          <div class="input-field col s12">
+            <textarea class="materialize-textarea" ng-model="vm.user.address"class="validate">
+          </textarea>
+          <label for="address">Address</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input ng-model="vm.user.phone" type="tel" class="validate">
+            <label for="phone">Phone</label>
           </div>
         </div>
         <div class="row">
@@ -128,7 +150,7 @@
         </div>
         <p ng-show="err" class="bg-danger">{{err}}</p>
         <button type="submit" class="waves-effect waves-light tx-green btn btn-large"> Register </button> or
-        <oauth-buttons classes="btn blue btn-large"></oauth-buttons>
+        <oauth-buttons classes="btn fb-blue btn-large"></oauth-buttons>
       </form>
    </div>
   </div>

@@ -11,7 +11,8 @@ angular.module('aApp', [
     'ui.router',
     'validation.match',
     'ui.materialize',
-    // 'angularSpinner'
+    'angular-loading-bar',
+    'ngAnimate'
 ])
 .config(function($urlRouterProvider, $locationProvider) {
   $urlRouterProvider.otherwise('/');
