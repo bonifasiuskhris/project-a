@@ -18,7 +18,7 @@
         </div>
 
         <div class="form-group" ng-class="{ 'has-success': form.email.$valid && vm.submitted,
-                                            'has-error': form.email.$invalid && vm.submitted }">
+                                            'has-error': form.email.$invalid && vm.submitted }"
           <label>Email</label>
 
           <input type="email" name="email" class="form-control" ng-model="vm.user.email"
@@ -90,7 +90,7 @@
 <div class="tx-green head-page">
     <div class="container">
       <div class="row center">
-      <h2 class="header col s12 light">Registrasi Pengguna</h2>
+      <h2 class="header col s12 light">Registrasi User</h2>
       </div>
     </div>
   </div>
@@ -99,55 +99,111 @@
    <div class="container section">
   <h3 class="center">Isi form berikut</h3>
    <div class="row">
-      <form class="form" name="form" ng-click="vm.register(form)" class="col s12">
+      <form class="form" name="form" ng-click="vm.register(form)" class="col s12" novalidate>
+
+
         <div class="row">
-          <div class="input-field col s6">
-            <input ng-model="vm.user.firstName" type="text" class="validate" required>
+          <div ng-class="{ 'has-success': form.firstName.$valid && vm.submitted,
+                                          'has-error': form.firstName.$invalid && vm.submitted }" 
+                                          class="input-field col s6">
+            <input name="firstName" ng-model="vm.user.firstName" type="text" class="validate" required>
             <label for="firstName">Nama Depan</label>
             <p class="help-block" ng-show="form.firstName.$error.required && vm.submitted">
             A name is required
           </p>
           </div>
-
-          <div class="input-field col s6">
-            <input ng-model="vm.user.lastName" type="text" class="validate" required>
+          <div  ng-class="{ 'has-success': form.lastName.$valid && vm.submitted,
+                                          'has-error': form.lastName.$invalid && vm.submitted }"
+                                          class="input-field col s6">
+            <input name="lastName" ng-model="vm.user.lastName" type="text" class="validate" required>
             <label for="lastName">Nama Belakang</label>
             <p class="help-block" ng-show="form.lastName.$error.required && vm.submitted">
             A name is required
           </p>
-          </div>
-
-          
+          </div>          
         </div>
+
+
          <div class="row">
-          <div class="input-field col s12">
-            <textarea class="materialize-textarea" ng-model="vm.user.address"class="validate">
+          <div  ng-class="{ 'has-success': form.address.$valid && vm.submitted,
+                                          'has-error': form.address.$invalid && vm.submitted }" 
+                                           class="input-field col s12">
+            <textarea name="address" class="materialize-textarea" ng-model="vm.user.address"class="validate" required>
           </textarea>
           <label for="address">Address</label>
+
           </div>
         </div>
+
+
         <div class="row">
-          <div class="input-field col s12">
-            <input ng-model="vm.user.phone" type="tel" class="validate">
+          <div  ng-class="{ 'has-success': form.phone.$valid && vm.submitted,
+                            'has-error': form.phone.$invalid && vm.submitted }"
+                             class="input-field col s12">
+            <input name="phone" ng-model="vm.user.phone" type="tel" class="validate" required>
             <label for="phone">Phone</label>
+
           </div>
         </div>
+
+
         <div class="row">
-          <div class="input-field col s12">
-            <input ng-model="vm.user.email" id="email" type="email" class="validate">
+          <div  ng-class="{ 'has-success': form.email.$valid && vm.submitted,
+                            'has-error': form.email.$invalid && vm.submitted }"
+                            class="input-field col s12">
+            <input name="email" ng-model="vm.user.email" id="email" type="email" class="validate"
+            required
+            mongoose-error>
             <label for="email">Email</label>
+
+            <p class="help-block" ng-show="form.email.$error.email && vm.submitted">
+            Doesn't look like a valid email.
+            </p>
+            <p class="help-block" ng-show="form.email.$error.required && vm.submitted">
+            What's your email address?
+            </p>
+            <p class="help-block" ng-show="form.email.$error.mongoose">
+            {{ vm.errors.email }}
+            </p>
           </div>
         </div>
+
+
         <div class="row">
-          <div class="input-field col s6">
-            <input ng-model="vm.user.password" id="password" type="password" class="validate">
+          <div  ng-class="{ 'has-success': form.password.$valid && vm.submitted,
+                                          'has-error': form.password.$invalid && vm.submitted }" 
+                                           class="input-field col s6">
+            <input ng-model="vm.user.password" id="password" type="password" class="validate"
+                 ng-minlength="3"
+                 required
+                 mongoose-error>
             <label for="password">Password</label>
+
+             <p class="help-block"
+              ng-show="(form.password.$error.minlength || form.password.$error.required) && vm.submitted">
+              Password must be at least 3 characters.
+            </p>
+            <p class="help-block" ng-show="form.password.$error.mongoose">
+            {{ vm.errors.password }}
+            </p>
           </div>
-          <div class="input-field col s6">
-            <input ng-model="vm.userconfirmPassword" id="retype_password" type="password" class="validate" match="vm.user.password">
+
+          <div ng-class="{ 'has-success': form.confirmPassword.$valid && vm.submitted,
+                                            'has-error': form.confirmPassword.$invalid && vm.submitted }"
+                                             class="input-field col s6">
+            <input name="confirmPassword" ng-model="vm.user.confirmPassword" id="retype_password" type="password" class="validate" match="vm.user.password"
+            ng-minlength="3" required>
             <label for="retype_password">Retype Password</label>
+
+            <p class="help-block"
+             ng-show="form.confirmPassword.$error.match && vm.submitted">
+            Passwords must match.
+          </p>
           </div>
+
         </div>
+
+
         <p ng-show="err" class="bg-danger">{{err}}</p>
         <button type="submit" class="waves-effect waves-light tx-green btn btn-large"> Register </button> or
         <oauth-buttons classes="btn fb-blue btn-large"></oauth-buttons>

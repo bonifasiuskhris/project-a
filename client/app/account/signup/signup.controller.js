@@ -24,8 +24,8 @@ class SignupController {
           firstName: this.user.firstName,
           lastName: this.user.lastName,
           address: this.user.address,
-          // postal: this.user.postal,
           phone: this.user.phone,
+          email: this.user.email,
           password: this.user.password
         })
         .then(() => {
