@@ -6,6 +6,7 @@ class SignupController {
   constructor(Auth, $state) {
       this.Auth = Auth;
       this.$state = $state;
+      this.submitted = false;
     }
     //start-non-standard
 

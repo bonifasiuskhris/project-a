@@ -7,7 +7,7 @@ class NavbarController {
   constructor(Auth) {
     this.isLoggedIn = Auth.isLoggedIn;
     this.isAdmin = Auth.isAdmin;
-    // this.isVendor = Auth.isVendor;
+    this.isVendor = Auth.isVendor;
     this.getCurrentUser = Auth.getCurrentUser;
   }
 
