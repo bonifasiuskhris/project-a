@@ -30,6 +30,14 @@ angular.module('aApp')
         controller: 'SignupVendorController',
         controllerAs: 'vm'
       })
+      .state('profile', {
+        url: '/profile',
+        templateUrl: 'app/account/profile/profile.html',
+        controller: 'ProfileController',
+        controllerAs: 'vm',
+        authenticate: true
+      })
+      .st
       .state('settings', {
         url: '/settings',
         templateUrl: 'app/account/settings/settings.html',
