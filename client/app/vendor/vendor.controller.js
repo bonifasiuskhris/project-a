@@ -1,7 +1,7 @@
 'use strict';
 (function(){
 
-class VendorComponent {
+class VendorController {
   constructor() {
     this.message = 'Hello';
   }
@@ -16,7 +16,7 @@ class VendorComponent {
 angular.module('aApp')
   .component('vendor', {
     templateUrl: 'app/vendor/vendor.html',
-    controller: VendorComponent,
+    controller: VendorController,
     controllerAs: 'vendor',
     authenticate: 'vendor'
   });
