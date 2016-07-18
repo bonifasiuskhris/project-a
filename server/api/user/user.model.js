@@ -13,6 +13,14 @@ var UserSchema = new Schema({
   lastName: String,
   address: String,
   phone: Number,
+  birthday:{
+    type:Date,
+    'default':Date.now
+  },
+  regisDate: {
+    type:Date,
+    'default': Date.now
+  },
   // name: String,
   email: {
     type: String,
@@ -41,7 +49,9 @@ var UserSchema = new Schema({
   },
   provider: String,
   salt: String,
-  facebook: {}
+  twitter: {},
+  facebook: {},
+  google: {}
 });
 
 /**

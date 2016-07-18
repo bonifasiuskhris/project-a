@@ -16,7 +16,9 @@ class VendorComponent {
 angular.module('aApp')
   .component('vendor', {
     templateUrl: 'app/vendor/vendor.html',
-    controller: VendorComponent
+    controller: VendorComponent,
+    controllerAs: 'vendor',
+    authenticate: 'vendor'
   });
 
 })();

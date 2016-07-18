@@ -7,7 +7,10 @@ export function setup(User, config) {
     clientSecret: config.facebook.clientSecret,
     callbackURL: config.facebook.callbackURL,
     profileFields: [
-      'displayName',
+      // 'displayName',
+      'first_name',
+      'last_name',
+      'birthday',
       'emails'
     ]
   },
@@ -19,7 +22,13 @@ export function setup(User, config) {
         }
 
         user = new User({
-          name: profile.displayName,
+          // my own code
+          firstName: profile.first_name,
+          lastName: profile.last_name,
+          address: '',
+          regisDate: Date.now,
+          birthday: profile.birthday,
+          // 
           email: profile.emails[0].value,
           role: 'user',
           provider: 'facebook',

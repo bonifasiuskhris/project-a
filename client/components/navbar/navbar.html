@@ -2,21 +2,20 @@
   <div class="container">
     <div class="navbar-header">
       <button class="navbar-toggle" type="button" ng-click="nav.isCollapsed = !nav.isCollapsed">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
       </button>
       <a href="/" class="navbar-brand">a</a>
     </div>
     <div uib-collapse="nav.isCollapsed" class="navbar-collapse collapse" id="navbar-main">
       <ul class="nav navbar-nav">
         <li ng-repeat="item in nav.menu" ui-sref-active="active">
-            <a ui-sref="{{item.state}}">{{item.title}}</a>
+          <a ui-sref="{{item.state}}">{{item.title}}</a>
         </li>
         <li ng-show="nav.isAdmin()" ui-sref-active="active"><a ui-sref="admin">Admin</a></li>
       </ul>
-
       <ul class="nav navbar-nav navbar-right">
         <li ng-hide="nav.isLoggedIn()" ui-sref-active="active"><a ui-sref="signup">Sign up</a></li>
         <li ng-hide="nav.isLoggedIn()" ui-sref-active="active"><a ui-sref="login">Login</a></li>
@@ -27,49 +26,67 @@
     </div>
   </div>
 </div>
- -->
-
-
-  <div class="navbar-fixed">
+-->
+<div class="navbar-fixed">
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
       <a id="logo-container" href="/" class="brand-logo">
         <img class="logo-image navbar-brand" src="../assets/images/tx-logo.png">
       </a>
-     
-      <ul class="right hide-on-med-and-down">
-        <!-- <li>
-          <a ng-hide="nav.isLoggedIn()" class="waves-effect waves-green" ng-href="register.vendor">Register Vendor</a>
-        </li> -->
+      
+      <ul ng-hide="nav.isLoggedIn() || nav.isAdmin() || nav.isVendor()" class="right hide-on-med-and-down">
         <li>
-          <a ng-hide="nav.isLoggedIn()" class="waves-effect waves-green" ui-sref="signup" >Register User</a>
-          <a ng-show="nav.isLoggedIn()" ui-sref="main">Main</a>
+          <a class="waves-effect waves-green" ui-sref="signup" >Register User</a>
         </li>
         <li>
           <a ng-hide="nav.isLoggedIn()" class="waves-effect waves-green" ui-sref="login" modal>Login</a>
-          <a ng-show="nav.isLoggedIn()" ui-sref="user/account">Account</a>
-        </li>
-        <li>
-          <a ng-show="nav.isLoggedIn()" ui-sref="logout" >Logout</a>
         </li>
       </ul>
+      <ul ng-hide="nav.isLoggedIn() || nav.isAdmin() || nav.isVendor()" id="nav-mobile" class="side-nav dark">
+        <li>
+          <a ui-sref="signupVendor">Daftar Vendor</a>
+        </li>
+        <li>
+          <a ui-sref="signup">Daftar Pengunjung</a>
+        </li>
+        <li>
+          <a ui-sref="login">Login</a>
+        </li>
+      </ul>
+      <!-- navigation user -->
+      <ul ng-show="nav.isLoggedIn()" class="right hide-on-med-and-down ">
+        <li>
+          <a ui-sref="main">Main</a>
+        </li>
+        
+        <!-- Dropdown Trigger -->
+        <a class='dropdown-button' href='javascript:void(0);' data-activates='Dropdown' dropdown data-hover="true">
+          Hello, {{nav.getCurrentUser().firstName}}
+          <i class="material-icons right">arrow_drop_down</i> 
+        </a>
+        <!-- Dropdown Structure -->
+        <ul id='Dropdown' class='dropdown-content'>
+          <li><a href="javascript:void(0);">Profile</a></li>
+          <li><a href="javascript:void(0);">Change Password</a></li>
+          <li><a ui-sref="logout" >Logout</a></li>
+        </ul>
+      </ul>
 
-      <ul id="nav-mobile" class="side-nav dark">
+
+      <ul ng-show="nav.isLoggedIn()" id="nav-mobile" class="side-nav dark">
         <li>
-          <a ng-hide="nav.isLoggedIn()" ui-sref="signupVendor">Daftar Vendor</a>
-        </li>
-         <li>
-          <a ng-hide="nav.isLoggedIn()" ui-sref="signup">Daftar Pengunjung</a>
+          <a ui-sref="main">Main</a>
         </li>
         <li>
-          <a ng-hide="nav.isLoggedIn()" ui-sref="login">Login</a>
-          <a ng-show="nav.isLoggedIn()" ui-sref="account">Account</a>
+          <a ui-sref="account">Account</a>
         </li>
         <li>
-          <a ng-show="nav.isLoggedIn()" ui-sref="logout" >Logout</a>
+          <a ui-sref="logout" >Logout</a>
         </li>
       </ul>
       <a href="#" class="button-collapse" data-activates="nav-mobile" data-sidenav="left" data-closeonclick="false"><i class="material-icons tx-green-text">menu</i></a>
     </div>
   </nav>
 </div>
+<!-- navigation vendor -->
+<!-- navigation admin -->
