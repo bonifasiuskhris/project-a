@@ -61,13 +61,13 @@
         
         <!-- Dropdown Trigger -->
         <a class='dropdown-button' href='javascript:void(0);' data-activates='Dropdown' dropdown data-hover="true">
-          Hello, {{nav.getCurrentUser().firstName}}
+          Logged as {{nav.getCurrentUser().firstName}}
           <i class="material-icons right">arrow_drop_down</i> 
         </a>
         <!-- Dropdown Structure -->
         <ul id='Dropdown' class='dropdown-content'>
           <li><a href="javascript:void(0);">Profile</a></li>
-          <li><a href="javascript:void(0);">Change Password</a></li>
+          <li><a ui-sref="settings">Change Password</a></li>
           <li><a ui-sref="logout" >Logout</a></li>
         </ul>
       </ul>

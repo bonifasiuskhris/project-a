@@ -1,7 +1,7 @@
 'use strict';
 (function(){
 
-class SearchComponent {
+class SearchController {
   constructor() {
     this.message = 'Hello';
   }
@@ -10,7 +10,7 @@ class SearchComponent {
 angular.module('aApp')
   .component('search', {
     templateUrl: 'app/search/search.html',
-    controller: SearchComponent
+    controller: SearchController
   });
 
 })();

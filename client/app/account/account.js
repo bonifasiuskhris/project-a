@@ -37,7 +37,6 @@ angular.module('aApp')
         controllerAs: 'vm',
         authenticate: true
       })
-      .st
       .state('settings', {
         url: '/settings',
         templateUrl: 'app/account/settings/settings.html',
