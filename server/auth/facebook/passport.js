@@ -23,11 +23,10 @@ export function setup(User, config) {
 
         user = new User({
           // my own code
-          firstName: profile.first_name,
-          lastName: profile.last_name,
+          firstName: profile._json.first_name,
+          lastName: profile._json.last_name,
           address: '',
-          regisDate: Date.now,
-          birthday: profile.birthday,
+          birthday: profile._json.birthday,
           // 
           email: profile.emails[0].value,
           role: 'user',
