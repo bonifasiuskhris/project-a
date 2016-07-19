@@ -10,6 +10,7 @@
       this.isAdmin = Auth.isAdmin;
       this.awesomeThings = [];
       this.getCurrentUser = Auth.getCurrentUser;
+      this.NAMA = 'HAHAHA';
     }
 
     // $onInit() {
@@ -50,6 +51,6 @@
     .component('main', {
       templateUrl: 'app/main/main.html',
       controller: MainController,
-      controllerAs: 'mainCtrl'
+      controllerAs: 'main'
     });
 })();

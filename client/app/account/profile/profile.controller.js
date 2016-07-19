@@ -1,4 +1,3 @@
-(function() {
 	'use strict';
 
 class ProfileController {
@@ -15,6 +14,3 @@ class ProfileController {
 
 angular.module('aApp').
 	controller('ProfileController', ProfileController);
-
-
-})();

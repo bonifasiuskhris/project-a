@@ -3,7 +3,7 @@
 angular.module('aApp')
   .config(function ($stateProvider) {
     $stateProvider
-      .state('results', {
+      .state('search.results', {
         url: '/results',
         template: '<results></results>'
       });

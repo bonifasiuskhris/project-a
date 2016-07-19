@@ -11,7 +11,8 @@ export function setup(User, config) {
       'first_name',
       'last_name',
       'birthday',
-      'emails'
+      'emails',
+      'picture.type(large)'
     ]
   },
   function(accessToken, refreshToken, profile, done) {
@@ -25,10 +26,11 @@ export function setup(User, config) {
           // my own code
           firstName: profile._json.first_name,
           lastName: profile._json.last_name,
-          address: '',
+          address: undefined,
           birthday: profile._json.birthday,
-          // 
+          picture: profile._json.photos ? profile.photos[0].value : '/img/faces/unknown-user-pic.jpg',
           email: profile.emails[0].value,
+          phone: undefined,
           role: 'user',
           provider: 'facebook',
           facebook: profile._json

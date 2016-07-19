@@ -15,20 +15,20 @@ class SignupVendorController {
 
     if (form.$valid) {
       this.Auth.createUser({
-          name: this.user.name,
-          email: this.user.email,
-          password: this.user.password
+          // name: this.user.name,
+          // email: this.user.email,
+          // password: this.user.password
 
           // prototype
 
-          // firstName: this.user.firstName,
-          // lastName: this.user.lastName,
-          // email: this.user.email,
-          // password: this.user.password,
-          // address: this.user.address,
-          // postal: this.user.postal,
-          // phone: this.user.phone,
-          // role: 'vendor'
+          firstName: this.user.firstName,
+          lastName: this.user.lastName,
+          email: this.user.email,
+          password: this.user.password,
+          address: this.user.address,
+          postal: this.user.postal,
+          phone: this.user.phone,
+          role: 'vendor'
         })
         .then(() => {
           // Account created, redirect to home

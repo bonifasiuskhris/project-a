@@ -3,7 +3,7 @@
         <div class="modal-content">
          <div class="row">
               <h4 class="center">Login</h4>
-              <form class="col s12" role="form">
+              <form name="form" ng-submit="login" class="col s12" role="form">
                 <div class="row">
                   <div class="input-field col s12 m8 l6 offset-m2 offset-l3">
                     <i class="material-icons prefix">account_circle</i>
@@ -26,7 +26,7 @@
                <div class="row">
                   <div class="col s6 offset-s5">
                   <p ng-show="err" class="bg-danger">{{err}}</p>
-                    <a ng-click="passwordLogin(loginEmail, loginPass)" class="modal-action modal-close waves-effect waves-light tx-green btn-large">Login</a>
+                    <a type="submit" class="modal-action modal-close waves-effect waves-light tx-green btn-large">Login</a>
                   </div>
                 </div>
               </form>

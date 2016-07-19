@@ -2,15 +2,18 @@
 (function(){
 
 class SearchController {
-  constructor() {
+  constructor($stateParams) {
     this.message = 'Hello';
+    this.meme = 'HAHAHAA';
+    this.Building = $stateParams.building;
   }
 }
 
 angular.module('aApp')
   .component('search', {
     templateUrl: 'app/search/search.html',
-    controller: SearchController
+    controller: SearchController,
+    controllerAs: 'search'
   });
 
 })();
