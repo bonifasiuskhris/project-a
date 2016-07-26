@@ -28,7 +28,7 @@
 </div>
 -->
 <div class="navbar-fixed">
-  <nav class="white" role="navigation">
+  <nav class="dark" role="navigation">
     <div class="nav-wrapper container">
       <a id="logo-container" href="/" class="brand-logo">
         <img class="logo-image navbar-brand" src="../assets/images/tx-logo.png">
@@ -36,10 +36,10 @@
       
       <ul ng-hide="nav.isLoggedIn() || nav.isAdmin() || nav.isVendor()" class="right hide-on-med-and-down">
         <li>
-          <a class="waves-effect waves-green" ui-sref="signup" >Register User</a>
+          <a class="waves-effect waves-green white-text" ui-sref="signup" >Register User</a>
         </li>
         <li>
-          <a ng-hide="nav.isLoggedIn()" class="waves-effect waves-green" ui-sref="login" modal>Login</a>
+          <a ng-hide="nav.isLoggedIn()" class="waves-effect waves-green white-text" ui-sref="login" modal>Login</a>
         </li>
       </ul>
       <ul ng-hide="nav.isLoggedIn() || nav.isAdmin() || nav.isVendor()" id="nav-mobile" class="side-nav dark">

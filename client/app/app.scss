@@ -46,7 +46,7 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 @import url(https://fonts.googleapis.com/css?family=Hind:400,300);
 
 body, html {
-  font-size: 18px;
+  font-size: 16px;
   font-family: 'Hind', sans-serif;
   font-weight: 400;
 }
@@ -59,6 +59,10 @@ p {
 h1, h2, h3, h4, h5, h6
 {
   font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+.bold {
   font-weight: 700;
 }
 
@@ -114,7 +118,7 @@ footer.page-footer {
 }
 
 .logo-image {
-   height: 40px;
+   height: 30px;
 }
 
 .page-title{
@@ -161,7 +165,7 @@ footer.page-footer {
 }
 
 #logo-container {
-  padding-top: 10px !important;
+  padding-top: 5px !important;
 }
 
 .white-box {
@@ -175,6 +179,10 @@ footer.page-footer {
 
 .tx-green-text {
   color: #2BDE73 !important;
+}
+
+.dark-text {
+  color: #222 !important;
 }
 
 .fb-blue {
@@ -205,9 +213,6 @@ footer.page-footer {
   }
 }
 
-.vendor {
-  height: 500px;
-}
 
 .btn-large:hover {
   opacity: 1 !important;

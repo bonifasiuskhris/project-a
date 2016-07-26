@@ -9,3 +9,13 @@ footer.footer {
 .dark {
 	background-color: #212121 !important;
 }
+
+.dark-text {
+	color:#222;
+}
+
+hr.style17 {
+	border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
